@@ -26,6 +26,9 @@ blocks:
         machine:
           type: s1-ubuntu2204
           os_image: ''
+        containers:
+          - name: main
+            image: 'semaphoreci/ubuntu:20.04'
   - name: Lint
     task:
       prologue:
