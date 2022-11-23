@@ -25,7 +25,7 @@ blocks:
           os_image: ''
         containers:
           - name: main
-            image: 'semaphoreci/ubuntu:20.04'
+            image: 'https://registry.semaphoreci.com/ubuntu:20.04'
   - name: Lint
     task:
       prologue:
