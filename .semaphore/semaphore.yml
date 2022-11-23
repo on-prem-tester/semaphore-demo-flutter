@@ -22,6 +22,10 @@ blocks:
           - checkout
           - 'cache restore flutter-packages-$SEMAPHORE_GIT_BRANCH-$(checksum pubspec.yaml),flutter-packages-$(checksum pubspec.yaml),flutter-packages'
           - flutter pub get
+      agent:
+        machine:
+          type: s1-ubuntu2204
+          os_image: ''
   - name: Lint
     task:
       prologue:
