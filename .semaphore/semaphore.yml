@@ -14,9 +14,6 @@ blocks:
             - env
             - rm -rf .toolbox
             - 'dowloadPath=$(curl -s -L --retry 5 http://packages.semaphoreci.com/toolbox/linux) && echo $dowloadPath && curl -s -L --retry 5 --connect-timeout 3 $dowloadPath -o /tmp/toolbox.tar && tar -xvf /tmp/toolbox.tar && mv toolbox ~/.toolbox && bash ~/.toolbox/install-toolbox && source ~/.toolbox/toolbox && echo ''source ~/.toolbox/toolbox'' >> ~/.bash_profile && if [ -f /etc/init.d/xvfb ]; then /etc/init.d/xvfb start; fi'
-            - source ~/.bash_profile
+            - bash ~/.bash_profile
             - env
-            - 'echo ${SHELL}'
-            - 'ps -p $$ '
-            - checkout
-            - source ~/.bash_profile && sem-version ruby 3.1.3
+            - sem-version ruby 3.1.3
