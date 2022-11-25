@@ -12,7 +12,7 @@ blocks:
           parallelism: 5
           commands:
             - rm -rf .toolbox
-            - source ~/bin/bash
+            - source ~/.bash_profile
             - 'dowloadPath=$(curl -s -L --retry 5 http://packages.semaphoreci.com/toolbox/linux) && echo $dowloadPath && curl -s -L --retry 5 --connect-timeout 3 $dowloadPath -o /tmp/toolbox.tar && tar -xvf /tmp/toolbox.tar && mv toolbox ~/.toolbox && bash ~/.toolbox/install-toolbox && source ~/.toolbox/toolbox && echo ''source ~/.toolbox/toolbox'' >> ~/.bash_profile && if [ -f /etc/init.d/xvfb ]; then /etc/init.d/xvfb start; fi'
             - checkout
             - sem-version ruby 3.1.3
