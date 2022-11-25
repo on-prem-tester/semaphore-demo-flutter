@@ -12,4 +12,4 @@ blocks:
           parallelism: 5
           commands:
             - checkout
-            - sudo apt-get update -y
+            - sem-service start postgres
