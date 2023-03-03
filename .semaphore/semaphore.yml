@@ -10,5 +10,6 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "hello" > hello.txt
-            - artifact push project hello.txt -v
+            - rm -rf hello.txt
+            - touch hello.txt
+            - artifact push project hello.txt -v -f
