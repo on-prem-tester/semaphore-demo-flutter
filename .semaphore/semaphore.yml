@@ -6,8 +6,6 @@ agent:
     os_image: ''
 blocks:
   - name: 'Block #1'
-    run:
-      when: change_in('/web-app/')
     task:
       jobs:
         - name: 'Job #1'
