@@ -23,5 +23,5 @@ blocks:
             - '# BIG FILE UPLOAD'
             - rm -rf 1g_file
             - fallocate -l 1G 1g_file
-            - stat hello.txt
-            - artifact push project hello.txt -v -f
+            - stat 1g_file
+            - artifact push project 1g_file -v -f
