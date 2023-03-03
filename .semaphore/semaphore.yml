@@ -12,4 +12,5 @@ blocks:
           commands:
             - rm -rf hello.txt
             - touch hello.txt
+            - stat hello.txt
             - artifact push project hello.txt -v -f
