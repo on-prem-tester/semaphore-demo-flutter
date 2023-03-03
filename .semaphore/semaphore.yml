@@ -16,7 +16,12 @@ blocks:
             - '# stat hello.txt'
             - '# artifact push project hello.txt -v -f'
             - '# NON-EMPTY FILE UPLOAD'
-            - rm -rf hello.txt
-            - echo "something" > hello.txt
+            - '# rm -rf hello.txt'
+            - '# echo "something" > hello.txt'
+            - '# stat hello.txt'
+            - '# artifact push project hello.txt -v -f'
+            - '# BIG FILE UPLOAD'
+            - rm -rf 1g_file
+            - fallocate -l 1G 1g_file
             - stat hello.txt
             - artifact push project hello.txt -v -f
