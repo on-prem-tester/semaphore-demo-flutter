@@ -11,4 +11,4 @@ blocks:
         - name: 'Job #1'
           commands:
             - touch hello.txt
-            - artifact push project hello.txt
+            - artifact push project hello.txt -v
