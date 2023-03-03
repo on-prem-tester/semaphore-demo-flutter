@@ -10,7 +10,13 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
+            - '# EMPTY FILE UPLOAD'
+            - '# rm -rf hello.txt'
+            - '# touch hello.txt'
+            - '# stat hello.txt'
+            - '# artifact push project hello.txt -v -f'
+            - '# NON-EMPTY FILE UPLOAD'
             - rm -rf hello.txt
-            - touch hello.txt
+            - echo "something" > hello.txt
             - stat hello.txt
             - artifact push project hello.txt -v -f
