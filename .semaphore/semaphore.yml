@@ -6,7 +6,7 @@ agent:
     os_image: ''
   containers:
     - name: main
-      image: 'semaphoreci/ubuntu:20.04'
+      image: 'docker.io/ruby:3.2.1'
 blocks:
   - name: 'Block #1'
     task:
