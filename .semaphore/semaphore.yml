@@ -10,6 +10,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - checkout
-            - 'for i in {0..30}; do echo "[$i] hello." && sleep 1; done'
-          parallelism: 25
+            - echo hello
