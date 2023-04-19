@@ -10,4 +10,8 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
+            - cache
+            - artifact
+            - checkout
             - 'for i in {0..60}; do echo "[$i] hello." && sleep 1; done'
+          parallelism: 25
