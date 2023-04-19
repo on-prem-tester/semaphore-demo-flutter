@@ -4,6 +4,9 @@ agent:
   machine:
     type: s1-lucaspin-testing
     os_image: ''
+  containers:
+    - name: main
+      image: 'semaphoreci/ubuntu:20.04'
 blocks:
   - name: 'Block #1'
     task:
