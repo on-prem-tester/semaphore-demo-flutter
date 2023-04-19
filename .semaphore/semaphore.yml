@@ -17,4 +17,14 @@ blocks:
             - artifact
             - checkout
             - 'for i in {0..60}; do echo "[$i] hello." && sleep 1; done'
-          parallelism: 25
+          parallelism: 50
+  - name: 'Block #2'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - cache
+            - artifact
+            - checkout
+            - 'for i in {0..60}; do echo "[$i] hello." && sleep 1; done'
+          parallelism: 50
