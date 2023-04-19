@@ -22,7 +22,7 @@ blocks:
   - name: 'Block #2'
     task:
       jobs:
-        - name: 'Job #1'
+        - name: 'Job #2'
           commands:
             - cache
             - artifact
@@ -30,3 +30,25 @@ blocks:
             - 'for i in {0..60}; do echo "[$i] hello." && sleep 1; done'
           parallelism: 50
     dependencies: []
+  - name: 'Block #3'
+    dependencies: []
+    task:
+      jobs:
+        - name: 'Job #3'
+          commands:
+            - cache
+            - artifact
+            - checkout
+            - 'for i in {0..60}; do echo "[$i] hello." && sleep 1; done'
+          parallelism: 50
+  - name: 'Block #4'
+    dependencies: []
+    task:
+      jobs:
+        - name: 'Job #4'
+          commands:
+            - cache
+            - artifact
+            - checkout
+            - 'for i in {0..60}; do echo "[$i] hello." && sleep 1; done'
+          parallelism: 50
