@@ -18,6 +18,7 @@ blocks:
             - checkout
             - 'for i in {0..60}; do echo "[$i] hello." && sleep 1; done'
           parallelism: 50
+    dependencies: []
   - name: 'Block #2'
     task:
       jobs:
@@ -28,3 +29,4 @@ blocks:
             - checkout
             - 'for i in {0..60}; do echo "[$i] hello." && sleep 1; done'
           parallelism: 50
+    dependencies: []
