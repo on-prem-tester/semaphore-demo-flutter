@@ -17,3 +17,4 @@ blocks:
             - artifact
             - checkout
             - 'for i in {0..60}; do echo "[$i] hello" && sleep 1; done'
+          parallelism: 50
